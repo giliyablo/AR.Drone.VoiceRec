@@ -5,9 +5,9 @@ client.takeoff();
 
 client
   .after(2000, function() {
-    this.clockwise(0.5);
+    this.clockwise(0.0125);
   })
-  .after(2000, function() {
+  .after(0, function() {
     this.stop();
     this.land();
   });
