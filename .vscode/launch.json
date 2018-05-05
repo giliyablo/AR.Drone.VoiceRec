@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/newArtyom.ts",
+            "program": "${workspaceFolder}/newReactArtyom.js",
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
             ]

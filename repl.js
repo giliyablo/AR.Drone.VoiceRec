@@ -1,4 +1,4 @@
-var arDrone = require('ar-drone');
+var arDrone = require('./node_modules/ar-drone');
 var client  = arDrone.createClient();
 
 client.takeoff();

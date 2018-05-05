@@ -1,7 +1,7 @@
 "use strict";
 exports.__esModule = true;
 // With ES6,TypeScript etc
-var artyom_js_1 = require("../node_modules/artyom.js");
+var artyom_js_1 = require("./node_modules/artyom.js");
 // Create a variable that stores your instance
 var artyom = new artyom_js_1["default"]();
 // Or if you are using it in the browser
