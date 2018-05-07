@@ -1,5 +1,6 @@
 // ArtyomCommands.js
-export default class ArtyomCommandsManager {
+//export default 
+ class ArtyomCommandsManager {
 
     // The ArtyomCommandsManager class expects as argument in the constructor
     // an already declared instance of Artyom.js

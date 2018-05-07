@@ -1,15 +1,32 @@
-import React from 'react';
+// "use strict";
+// exports.__esModule = true;
+
+// With ES6,TypeScript etc
+import artyom_js_2 from "./node_modules/artyom.js";
+
+// Create a variable that stores your instance
+// var artyom = new artyom_js_1["default"]();
+
+// Or if you are using it in the browser
+// var artyom = new Artyom();// or `new window.Artyom()`
+// Add command (Short code artisan way)
+
+// import React from 'react';
 
 // Import the Artyom library
-import Artyom from 'artyom.js';
+// import Artyom from 'artyom.js';
 
 // Import the previously created class to handle the commands from another file
-import ArtyomCommandsManager from './ArtyomCommands.js';
+// import ArtyomCommandsManager from './ArtyomCommands.js';
+ import ArtyomCommandsManager from "./ArtyomCommands";
 
 // Create a "globally" accesible instance of Artyom
-const Jarvis = new Artyom();
+const Jarvis = new artyom_js_2(); 
+// ["default"]
+// = new Artyom(); 
 
-export default class App extends React.Component {
+// export default 
+class App extends React.Component {
     constructor (props, context){
         super(props, context);
 
@@ -100,24 +117,24 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Welcome to Jarvis Assistant</h1>
+            "<div>"+
+                "<h1>Welcome to Jarvis Assistant</h1>"+
 
-                <p>In this very basic assistant, you can say hello and ask for some reports e.g `Generate report of April of this year`</p>
+                "<p>In this very basic assistant, you can say hello and ask for some reports e.g `Generate report of April of this year`</p>"+
                 
-                {/* Voice commands action buttons */}
-                <input type="button" value="Start Artyom" disabled={this.state.artyomActive} onClick={this.startAssistant}/>
-                <input type="button" value="Stop Artyom" disabled={!this.state.artyomActive} onClick={this.stopAssistant}/>
+                "{/* Voice commands action buttons */}"+
+                "<input type=\"button\" value=\"Start Artyom\" disabled={this.state.artyomActive} onClick={this.startAssistant}/>"+
+                "<input type=\"button\" value=\"Stop Artyom\" disabled={!this.state.artyomActive} onClick={this.stopAssistant}/>"+
 
-                {/* Speech synthesis Area */}
+                "{/* Speech synthesis Area */}"+
 
-                <p>I can read some text for you if you want:</p>
+                "<p>I can read some text for you if you want:</p>"+
                 
-                <textarea rows="5" onChange={this.handleTextareaChange} value={this.state.textareaValue}/>
-                <br/>
-                {/* Read the text inside the textarea with artyom */}
-                <input type="button" value="Read Text" disabled={this.state.artyomIsReading} onClick={this.speakText}/>
-            </div>
+                "<textarea rows=\"5\" onChange={this.handleTextareaChange} value={this.state.textareaValue}/>"+
+                "<br/>"+
+                "{/* Read the text inside the textarea with artyom */}"+
+                "<input type=\"button\" value=\"Read Text\" disabled={this.state.artyomIsReading} onClick={this.speakText}/>"+
+            "</div>"
         )
     }
 }
